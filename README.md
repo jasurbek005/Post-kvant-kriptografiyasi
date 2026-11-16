@@ -1,20 +1,31 @@
-# Bitiruv Malakaviy Ishi (BMI) - Ilmiy-Amaliy Loyiha
+# Hybrid PQC Secure Tunnel & Key Exchange Protocol
+> **Bitiruv Malakaviy Ishi (BMI) Amaliy Moduli**  
+> **Yo'nalish:** Axborot xavfsizligi (4-kurs)  
+> **Muallif:** Xasanov Jasurbek (O'zbekiston xalqaro islom akademiyasi)
 
-* **Mavzu:** Kvantdan keyingi davr uchun gibrid kriptografik protokollarni ishlab chiqish va tahlil qilish
-* **Bajaruvchi:** Xasanov Jasurbek
-* **Oʻquv muassasasi:** Oʻzbekiston xalqaro islom akademiyasi
-* **Yoʻnalish:** Axborot xavfsizligi (4-kurs)
+---
 
-## 🔬 Loyihaning ilmiy-amaliy ahamiyati
-Ushbu loyiha kvant kompyuterlarining paydo bo'lishi bilan an'anaviy simmetrik va asimmetrik shifrlash (RSA, ECC) algoritmlariga yuzaga keladigan kriptografik tahdidlarni o'rganishga va ularning o'rnini bosuvchi post-kvant standartlarini (NIST PQC) amalda tatbiq etishga bag'ishlangan.
+## 📌 Loyihaning Maqsadi
+Ushbu loyiha kvant kompyuterlarining kelajakdagi tahdidlariga qarshi turish uchun **Klassik (ECDH / AES)** va **NIST tomonidan tasdiqlangan Post-Kvant (PQC / Lattice-based)** kriptografik algoritmlarini birlashtiruvchi gibrid prototip arxitekturasini ishlab chiqish va sinovdan o'tkazishga bag'ishlangan.
 
-## 🛠 Texnologik stek
-* **Dili til:** Python 3.x
-* **Kriptografik kutubxonalar:** PyCryptodome, OpenSSL, liboqs (Post-Quantum cryptography bindings)
-* **Tahlil vositalari:** Benchmark va tarmoq trafigini simulyatsiya qilish modullari
+## 🏛 Arxitektura va Ishlash Prinsipi
+Loyiha quyidagi asosiy modullardan iborat:
+1. **Gibrid Kalit Almashinuvi (`core/hybrid_exchange.py`):** Klassik va post-kvant entropiya manbalarini birlashtirib, xavfsiz sessiya kalitini hosil qiladi (HKDF yondashuvi).
+2. **Shifrlash Moduli (`AES-256-GCM`):** Hosil qilingan kalit yordamida uzatilayotgan ma'lumotlarning maxfiyligi va butunligini (authenticity) ta'minlaydi.
 
-## 📋 Ish bosqichlari
-- [ ] 1. Kvant tahdidlari va Shor algoritmining nazariy tahlili
-- [ ] 2. NIST PQC standartlari (ML-KEM / Kyber) arxitekturasini o'rganish
-- [ ] 3. Klassik va Post-kvant algoritmlarini birlashtiruvchi gibrid prototipni kodlash
-- [ ] 4. Ishlash tezligi va resurs sarfi bo'yicha qiyosiy benchmark testlarini o'tkazish
+## 📂 Repozitoriy Tuzilmasi
+- `chapter1.md` — 1-Bob: Klassik kriptografik tizimlar va kvant tahdidlari
+- `chapter2.md` — 2-Bob: Post-kvant kriptografiyasi va NIST standartlari
+- `chapter3.md` — 3-Bob: Amaliy qism va gibrid simulyatsiya tahlili
+- `hybrid_exchange.py` — Gibrid protokollarning asosiy dasturiy yadrosi
+- `plan.md` — Ishning kalendar rejasi va mundarijasi
+
+## 🚀 Ishga Tushirish (Quick Start)
+Dasturni sinovdan o'tkazish uchun Python 3 va `cryptography` kutubxonasi talab qilinadi. Terminalda quyidagi buyruqni bajaring:
+
+```bash
+# Kerakli kutubxonani o'rnatish
+pip install cryptography
+
+# Gibrid protokoll yadrosini ishga tushirish
+python3 hybrid_exchange.py
