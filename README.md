@@ -1,15 +1,20 @@
-# Bitiruv Malakaviy Ishi (BMI)
+# Bitiruv Malakaviy Ishi (BMI) - Ilmiy-Amaliy Loyiha
 
-* **Mavzu:** Post-kvant kriptografiyasi va uning zamonaviy axborot xavfsizligiga ta'siri
+* **Mavzu:** Kvantdan keyingi davr uchun gibrid kriptografik protokollarni ishlab chiqish va tahlil qilish
 * **Bajaruvchi:** Xasanov Jasurbek
 * **Oʻquv muassasasi:** Oʻzbekiston xalqaro islom akademiyasi
-* **Yoʻnalish:** Axborot xavfsizligi
+* **Yoʻnalish:** Axborot xavfsizligi (4-kurs)
 
-## 📌 Loyiha haqida
-Ushbu repozitoriy bitiruv malakaviy ishini yozish jarayonida bajariladigan amaliy ishlar, tahlillar va dasturiy kodlarni saqlash uchun ochildi.
+## 🔬 Loyihaning ilmiy-amaliy ahamiyati
+Ushbu loyiha kvant kompyuterlarining paydo bo'lishi bilan an'anaviy simmetrik va asimmetrik shifrlash (RSA, ECC) algoritmlariga yuzaga keladigan kriptografik tahdidlarni o'rganishga va ularning o'rnini bosuvchi post-kvant standartlarini (NIST PQC) amalda tatbiq etishga bag'ishlangan.
 
-## 🚀 Rejalashtirilgan ishlar
-- [ ] Nazariy qismni shakllantirish
-- [ ] Kvant kompyuterlarining RSA va ECC algoritmlariga tahdidlarini tahlil qilish
-- [ ] Post-kvant shifrlash standartlarini oʻrganish
-- [ ] Amaliy dasturiy modul yaratish va sinovdan oʻtkazish
+## 🛠 Texnologik stek
+* **Dili til:** Python 3.x
+* **Kriptografik kutubxonalar:** PyCryptodome, OpenSSL, liboqs (Post-Quantum cryptography bindings)
+* **Tahlil vositalari:** Benchmark va tarmoq trafigini simulyatsiya qilish modullari
+
+## 📋 Ish bosqichlari
+- [ ] 1. Kvant tahdidlari va Shor algoritmining nazariy tahlili
+- [ ] 2. NIST PQC standartlari (ML-KEM / Kyber) arxitekturasini o'rganish
+- [ ] 3. Klassik va Post-kvant algoritmlarini birlashtiruvchi gibrid prototipni kodlash
+- [ ] 4. Ishlash tezligi va resurs sarfi bo'yicha qiyosiy benchmark testlarini o'tkazish
